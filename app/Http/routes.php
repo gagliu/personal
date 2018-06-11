@@ -13,6 +13,12 @@
 
 Route::get('/', 'WelcomeController@index');
 
+/*
+Route::get('/', function () {
+    return view('portfolio');
+});
+*/
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
