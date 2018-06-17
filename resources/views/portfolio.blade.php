@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <title>Juan Giraldo</title>
 
+        <script type="text/javascript">
+        $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+              }
+          });
+        </script>
+
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width , initial-scale=1, maximum-scale=1">
 
@@ -569,7 +577,7 @@
                                                           </div>
                                                           <form id="contact-form" class="contact-form" action="{{ url('portfolioQuestion') }}" method="post">
                                                               <div class="messages"></div>
-                                                              {{ csrf_field() }}
+
                                                               <div class="controls">
                                                                   <div class="form-group form-group-with-icon">
                                                                       <i class="form-control-icon fa fa-user"></i>
@@ -622,5 +630,6 @@
         <script type='text/javascript' src='assets/portfolio/main.js'></script>
         <script type='text/javascript' src='assets/portfolio/ba21720f-1511360909.min.js'></script>
         <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
     </body>
 </html>

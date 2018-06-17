@@ -34,4 +34,20 @@ class WelcomeController extends Controller {
 		return view('portfolio');
 	}
 
+	public function portfolioQuestion(Request $request)
+	{
+		//return $request->all();
+		/*
+		Mail::send('emails.question', ['request' => $request  ], function ($m) use ($request) {
+				$m->from('onboard@happychild.es', 'Portfolio - Developer');
+				$m->to('juangiraldo222@gmail.com', 'Juan Giraldo')->subject($request->messaje);
+				//$m->to($user->email, $user->name)->subject('Bienvenido a HappyChild');
+		});
+
+		return response()->json([
+				'message' => 'Thanks for your question. I will reply very soon'
+		]);
+		*/
+	}
+
 }

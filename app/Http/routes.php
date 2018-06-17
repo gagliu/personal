@@ -13,6 +13,8 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::post('portfolioQuestion', 'WelcomeController@portfolioQuestion');
+
 /*
 Route::get('/', function () {
     return view('portfolio');
